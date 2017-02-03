@@ -1,0 +1,150 @@
+/*解决高度塌陷*/
+.fixheight:before,
+.fixheight:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+/*去除默认样式*/
+* {
+	outline: 0;
+	margin: 0;
+	padding: 0;
+	transition: background .3s;
+}
+
+/*标题*/
+.tilte {
+	margin: 50px auto 0px;
+	text-align: center;
+	color: #f00;
+	font: 35px "微软雅黑";
+	cursor: default;
+}
+
+/*导航条*/
+.navdiv {
+	max-width: 1200px;
+	height: 25px;
+	margin: 30px auto 0px;
+}
+.navdiv .nav {	
+	background-color: #F0552E;
+	margin: 0 1%;
+	width: 98%;
+	box-shadow: 0 2px 3px rgba(0,0,0,.4);
+}
+.nav li {
+	display: block;
+	width: 33.33333%;
+	float: left;
+	list-style: none;
+}
+.nav a:not(.quit),
+.nav span {
+	display: block;
+	width: 100%;
+	text-align: center;
+	padding: 5px 0;
+	
+}
+.nav a:hover:not(.quit),
+.nav span:hover {
+	background-color: #c00;
+}
+.nav span{
+	color: white;
+	cursor: default;
+}
+.nav a{
+	color: white;
+	text-decoration: none;
+}
+
+/*搜索框*/
+.search{
+	/*background-color: red;*/
+	max-width: 1200px;
+	height: 60px;
+	margin: 10px auto;
+}
+.search input{
+	height: 38px;
+	margin: 11px 1%;
+	width: 84%;
+	text-align: center;
+	/*border: 1px solid #CDCDCD;*/
+	border: 0;
+	background: #ddd;
+	box-shadow: 0 2px 3px rgba(0,0,0,.4);
+	border-radius: 10px;
+}
+.search input:hover,
+.search input:focus{
+	background: #F2F2F2;
+	box-shadow: 2px rgba(0,0,0,.4);
+}
+.search button{
+	height: 38px;
+	width: 12%;
+	border: 0;
+	box-shadow: 0 2px 3px rgba(0,0,0,.4);
+	border-radius: 10px;
+}
+.search button:hover,
+.search button:active{
+	background-color: #CDCDCD;
+	cursor: pointer;
+}
+
+/*表格*/
+.content{
+	margin: 10px auto;
+	max-width: 1200px;
+	font: 14px "微软雅黑";
+}
+.content table{
+	width: 98%;
+	margin: 0 auto;
+	border-collapse: collapse;
+	box-shadow: 0 2px 3px rgba(0,0,0,.4);
+}
+tbody td,
+thead th{
+	cursor:default;
+	/*border: 1px solid;*/
+	text-align: center;
+}
+.content thead tr{
+	width: 100%;
+	height: 60px;
+	background-color: #CDCDCD;
+	font-size: 15px;
+	border-radius: 3px;
+}
+.content tbody tr{
+	border-top: 1px groove;
+	height: 50px;
+	
+}
+.content tbody tr:nth-child(2n){
+	background-color: #F0F0F0;
+}
+.content tbody tr:hover{
+	background-color: #CDCDCD;
+}
+
+/*购买删除修改*/
+.content .delete,
+.content .alter,
+.content .buy{
+	display: block;
+	width: 100%;
+	text-decoration: none;
+}
+
+.content .alter:hover,
+.content .delete:hover,
+.content .buy:hover{
+	cursor: pointer;
+}
